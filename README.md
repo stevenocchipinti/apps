@@ -1,43 +1,101 @@
-# Astro Starter Kit: Minimal
+# Apps
 
-```sh
-npm create astro@latest -- --template minimal
+A clean, modern portfolio page showcasing my personal projects and applications. Built with Astro for maximum performance and simplicity.
+
+## Features
+
+- Static site generation (no client-side JavaScript)
+- Responsive design with mobile-first approach
+- Light and dark mode support via `prefers-color-scheme`
+- CSS Grid with subgrid for consistent alignment
+- Accessible, semantic HTML
+- Clean, professional aesthetic
+
+## Tech Stack
+
+- **Astro** - Static site generator
+- **TypeScript** - Type safety
+- **CSS** - Modern CSS with Grid, custom properties, and media queries
+- **Inter** - Clean, professional typeface from Google Fonts
+
+## Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
+│   ├── icons/          # App icons (SVG/PNG)
+│   └── favicon.svg
 ├── src/
+│   ├── components/
+│   │   └── AppTile.astro   # Reusable app tile component
 │   └── pages/
-│       └── index.astro
+│       └── index.astro     # Main landing page
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Prerequisites
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Node.js 18 or higher
+- npm
 
-## 🧞 Commands
+### Getting Started
 
-All commands are run from the root of the project, from a terminal:
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+2. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-## 👀 Want to learn more?
+3. Open your browser to `http://localhost:4321`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Building for Production
+
+```sh
+npm run build
+```
+
+The static site will be generated in the `./dist/` directory.
+
+### Preview Production Build
+
+```sh
+npm run preview
+```
+
+## Adding New Apps
+
+To add a new app to the listing, edit `src/pages/index.astro` and add a new `<AppTile>` component with the following props:
+
+```astro
+<AppTile
+  name="App Name"
+  subtitle="Brief description of what the app does"
+  icon="app-icon.svg"
+  productionUrl="https://example.com"
+  githubUrl="https://github.com/username/repo"
+/>
+```
+
+Place the corresponding icon file in the `public/icons/` directory.
+
+## Design System
+
+The project uses a 4px-based spacing system with rem units for accessibility:
+
+- **0.25rem** = 4px
+- **0.5rem** = 8px
+- **0.75rem** = 12px
+- **1rem** = 16px
+- **1.25rem** = 20px
+- **1.5rem** = 24px
+- etc.
+
+## License
+
+Private project for personal use.
