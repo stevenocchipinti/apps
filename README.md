@@ -43,11 +43,13 @@ A clean, modern portfolio page showcasing my personal projects and applications.
 ### Getting Started
 
 1. Install dependencies:
+
    ```sh
    npm install
    ```
 
 2. Start the development server:
+
    ```sh
    npm run dev
    ```
@@ -83,18 +85,6 @@ To add a new app to the listing, edit `src/pages/index.astro` and add a new `<Ap
 ```
 
 Place the corresponding icon file in the `public/icons/` directory.
-
-## Design System
-
-The project uses a 4px-based spacing system with rem units for accessibility:
-
-- **0.25rem** = 4px
-- **0.5rem** = 8px
-- **0.75rem** = 12px
-- **1rem** = 16px
-- **1.25rem** = 20px
-- **1.5rem** = 24px
-- etc.
 
 ## License
 
