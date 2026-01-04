@@ -1,16 +1,221 @@
 ---
-
+import AppTile from '../components/AppTile.astro';
 ---
 
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="A collection of apps and projects by Steve Occhipinti" />
+    <title>Apps - Steve Occhipinti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <h1>Apps</h1>
+      </header>
+      
+      <div class="apps-grid">
+        <AppTile
+          name="Local Search"
+          subtitle="Find nearby amenities"
+          icon="local-search.svg"
+          productionUrl="https://local-search-map.vercel.app/"
+          githubUrl="https://github.com/stevenocchipinti/map-search"
+        />
+        <AppTile
+          name="Player Picker"
+          subtitle="Choose who goes first in games, split into groups, etc."
+          icon="player-picker.png"
+          productionUrl="https://player-picker-gold.vercel.app/"
+          githubUrl="https://github.com/stevenocchipinti/player-picker"
+        />
+        <AppTile
+          name="Footy darts"
+          subtitle="An AFL inspired IRL darts game score tracker"
+          icon="footy-darts.svg"
+          productionUrl="https://footy-darts.web.app"
+          githubUrl="https://github.com/stevenocchipinti/darts"
+        />
+        <AppTile
+          name="Baby Timer"
+          subtitle="Track the feeds and sleeps of your baby"
+          icon="baby-timer.png"
+          productionUrl="https://babytimer.web.app/"
+          githubUrl="https://github.com/stevenocchipinti/baby-tracker"
+        />
+        <AppTile
+          name="Fatlog"
+          subtitle="Track body weight, fat percentage and waist measurement"
+          icon="fatlog.svg"
+          productionUrl="https://fatlog.web.app/"
+          githubUrl="https://github.com/stevenocchipinti/fatlog"
+        />
+        <AppTile
+          name="Bleep"
+          subtitle="Exercise timer with custom programs and voice synth"
+          icon="bleep.png"
+          productionUrl="https://bleep-timer.vercel.app/"
+          githubUrl="https://github.com/stevenocchipinti/bleep"
+        />
+        <AppTile
+          name="Shopping Planner"
+          subtitle="Collaborative shopping list and meal planner"
+          icon="shopping-planner.png"
+          productionUrl="https://shoppingplanner.web.app/"
+          githubUrl="https://github.com/stevenocchipinti/shopping-list"
+        />
+        <AppTile
+          name="Piano Flashcards"
+          subtitle="Learn how to read piano music"
+          icon="piano-flashcards.png"
+          productionUrl="https://piano-flashcards.vercel.app/"
+          githubUrl="https://github.com/stevenocchipinti/piano-flashcards"
+        />
+        <AppTile
+          name="Vim Workshop"
+          subtitle="Create and share vim golf style challenges"
+          icon="vim-workshop.svg"
+          productionUrl="https://www.vimworkshop.com/"
+          githubUrl="https://github.com/stevenocchipinti/vim-workshop"
+        />
+        <AppTile
+          name="Poo Snooker"
+          subtitle="A custom made IRL billiards game score tracker"
+          icon="poo-snooker.png"
+          productionUrl="https://poosnooker.web.app/"
+          githubUrl="https://github.com/stevenocchipinti/poosnooker"
+        />
+        <AppTile
+          name="Blog"
+          subtitle="My personal ramblings and travel blogs"
+          icon="blog.svg"
+          productionUrl="https://blog.stevenocchipinti.com/"
+          githubUrl="https://github.com/stevenocchipinti/blog"
+        />
+        <AppTile
+          name="Blog Editor"
+          subtitle="Private. Personal app to edit my blogs"
+          icon="blog-editor.svg"
+          productionUrl="https://edit.stevenocchipinti.com/"
+          githubUrl="https://github.com/stevenocchipinti/blog-editor"
+        />
+      </div>
+    </main>
+  </body>
 </html>
+
+<style is:global>
+  :root {
+    --bg-primary: #f5f7fa;
+    --bg-secondary: #ffffff;
+    --card-bg: #ffffff;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e0;
+    --icon-bg: #e2e8f0;
+    
+    --primary-bg: #3b82f6;
+    --primary-hover: #2563eb;
+    --primary-text: #ffffff;
+    
+    --secondary-bg: #f1f5f9;
+    --secondary-hover: #e2e8f0;
+    --secondary-text: #334155;
+    
+    --max-width: 680px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --card-bg: #1e293b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --border-color: #334155;
+      --border-hover: #475569;
+      --icon-bg: #334155;
+      
+      --primary-bg: #3b82f6;
+      --primary-hover: #2563eb;
+      --primary-text: #ffffff;
+      
+      --secondary-bg: #334155;
+      --secondary-hover: #475569;
+      --secondary-text: #e2e8f0;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 1.25rem;
+  }
+
+  .page-header {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .apps-grid {
+    display: grid;
+    grid-template-columns: minmax(auto, min(9rem, 40%)) 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media (min-width: 48rem) {
+    .container {
+      padding: 3rem 1.5rem;
+    }
+
+    .page-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .apps-grid {
+      gap: 1.25rem;
+    }
+  }
+</style>
